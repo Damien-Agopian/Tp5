@@ -24,7 +24,7 @@ class noeud{
 	noeud(int key); //Custom constructors
 	
 	private :
-	int key;
+	int* key;
 	int* fd;
 	int* fg;
 

@@ -27,13 +27,13 @@ void noeud::set_cle(int cle){
 }
 //getters
 int noeud::getfilsdroite(){
-	return fd;	
+	return &fd;	
 }
 int noeud::getfilsgauche(){
-	return fg;	
+	return &fg;	
 }
 int noeud::getcle(){
-	return key;	
+	return &key;	
 }
 
 
