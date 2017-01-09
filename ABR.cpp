@@ -16,6 +16,9 @@ noeud::noeud(int key_custom){
 	fg = NULL;
 }
 
+void creation_arbre(int a){
+}
+
 int main(){
 	noeud unnoeud = noeud();
 	int a = unnoeud.key;
