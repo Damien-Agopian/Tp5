@@ -5,13 +5,13 @@ using namespace std;
 
 
 noeud::noeud(){
-	&key = 0;
+	*key = 0;
 	fd = NULL; 
 	fg = NULL;
 }
 
 noeud::noeud(int key_custom){
-	&key = key_custom;
+	*key = key_custom;
 	fd = NULL;
 	fg = NULL;
 }
@@ -23,17 +23,17 @@ void noeud::set_filsgauche(int* filsgauche){
 	fg=filsgauche;	
 }
 void noeud::set_cle(int cle){
-	key=cle;	
+	*key=cle;	
 }
 //getters
 int noeud::getfilsdroite(){
-	return &fd;	
+	return *fd;	
 }
 int noeud::getfilsgauche(){
-	return &fg;	
+	return *fg;	
 }
 int noeud::getcle(){
-	return &key;	
+	return *key;	
 }
 
 
@@ -45,8 +45,10 @@ int main(){
 	noeud racine = noeud(10);
 	noeud premierfilsgauche = noeud(8);
 	noeud premierfilsdroit = noeud(9);
-	racine.set_filsgauche(*premierfilsgauche);
-	racine.set_filsdroit(*premierfilsdroit);
+	noeud* pg = &premierfilsgauche;
+	noeud* pd = &premierfilsdroit;
+	racine.set_filsgauche(pg);
+	racine.set_filsdroit(pd);
 	
 	//int a = unnoeud.key;
 	//cout << a << endl;

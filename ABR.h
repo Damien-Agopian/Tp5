@@ -15,8 +15,8 @@ class noeud{
 	int getfilsgauche();
 	int getcle();
 	//setters
-	void set_filsdroit(int droit);
-	void set_filsgauche(int gauche);
+	void set_filsdroit(noeud* droit);
+	void set_filsgauche(noeud* gauche);
 	void set_cle(int cle);
 	
 	//Constructors
