@@ -37,7 +37,8 @@ int noeud::getcle(){
 }
 
 
-void creation_arbre(int a){
+void creation_arbre(){
+	noeud racine();
 }
 
 int main(){

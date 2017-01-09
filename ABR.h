@@ -3,7 +3,7 @@
 class noeud{
 	public :
 	//Methods
-	void creation_arbre(int a);
+	void creation_arbre();
 	bool verif_arbre(noeud un_noeud);
 	noeud recherche(int key);
 	void insertion(int key,noeud racine);
