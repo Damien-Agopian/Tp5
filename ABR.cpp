@@ -16,10 +16,10 @@ noeud::noeud(int key_custom){
 	fg = NULL;
 }
 //setters
-void noeud::set_filsdroit(int* filsdroit){
+void noeud::set_filsdroit(noeud* filsdroit){
 	fd=filsdroit;	
 }
-void noeud::set_filsgauche(int* filsgauche){
+void noeud::set_filsgauche(noeud* filsgauche){
 	fg=filsgauche;	
 }
 void noeud::set_cle(int cle){
