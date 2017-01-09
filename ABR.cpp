@@ -16,11 +16,11 @@ noeud::noeud(int key_custom){
 	fg = NULL;
 }
 //setters
-void noeud::set_filsdroit(int filsdroit){
-	*fd=&filsdroit;	
+void noeud::set_filsdroit(int* filsdroit){
+	fd=filsdroit;	
 }
-void noeud::set_filsgauche(int filgauche){
-	*fg=&filgauche;	
+void noeud::set_filsgauche(int* filsgauche){
+	fg=filsgauche;	
 }
 void noeud::set_cle(int cle){
 	key=cle;	
@@ -42,9 +42,14 @@ void creation_arbre(){
 }
 
 int main(){
-	noeud unnoeud = noeud();
-	int a = unnoeud.key;
-	cout << a << endl;
+	noeud racine = noeud(10);
+	noeud premierfilsgauche = noeud(8);
+	noeud premierfilsdroit = noeud(9);
+	racine.set_filsgauche(*premierfilsgauche);
+	racine.set_filsdroit(*premierfilsdroit);
+	
+	//int a = unnoeud.key;
+	//cout << a << endl;
 	return 0;
 
 }
